@@ -22,7 +22,6 @@ void dfs(int x,int y)
 		if (preanswer > answer)
 		{
 			answer = preanswer;
-			//cout << answer << ' ';
 		}
 		return;
 	}
@@ -37,10 +36,10 @@ void dfs(int x,int y)
 			if (!visited[dx][dy])
 			{
 				dfs(dx, dy);
+				visited[dx][dy] = false;
+				roote--;
+				preanswer -= arr[dx][dy];
 			}
-			visited[dx][dy] = false;
-			roote--;
-			preanswer -= arr[dx][dy];
 		}
 	}
 }
@@ -64,7 +63,12 @@ int main()
 		for (int j = 1; j <= M; j++)
 		{
 			if (!visited[i][j])
+			{
 				dfs(i, j);
+				visited[i][j] = false;
+				roote--;
+				preanswer -= arr[i][j];
+			}
 		}
 	}
 
