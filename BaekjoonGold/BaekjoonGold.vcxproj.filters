@@ -57,5 +57,8 @@
     <ClCompile Include="숨바꼭질3.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="치킨_배달.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
